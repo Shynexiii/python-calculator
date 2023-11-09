@@ -14,8 +14,8 @@ def run_calc():
     term_1 = input("Saisissez votre premier entier \n")
     term_2 = input("Saisissez votre second entier \n")
     res = calc.ope(op, term_1, term_2)
-    print(f"{term_1} {op} {term_2} = {res}")
-    while True:  # Keep asking until we get a 'y' or 'n'
+    while res is not None:
+        print(f"{term_1} {op} {term_2} = {res}")
         keep_going = input("Voulez-vous continuer ? (O/N) : ").strip().lower()
         if keep_going == 'n':
             print("Fin du programme. Au revoir!")
